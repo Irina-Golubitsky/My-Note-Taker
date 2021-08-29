@@ -1,8 +1,1 @@
-
- {"notes": [  
-    {
-        "id":"1",
-        "title":"Test Title",
-        "text":"Test text"
-    }
-]}
+[{"title":"first","text":"text1"},{"title":"second note","text":"text2 "},{"title":"first","text":"text1\n"}]
