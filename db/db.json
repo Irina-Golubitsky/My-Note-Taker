@@ -1,9 +1,14 @@
 {
   "notes": [
     {
-      "id": "0dfdf37e-80a4-4556-87f3-083eb9172c73",
-      "title": "new one",
-      "text": "hfierhf 1"
+      "id": "cd13e7b3-5281-4972-95bb-1a0d76e3aadd",
+      "title": "Second note",
+      "text": "text 2"
+    },
+    {
+      "id": "1a88ca36-9c09-4195-bac2-4ba96a342186",
+      "title": "Third note",
+      "text": "text 3"
     }
   ]
 }

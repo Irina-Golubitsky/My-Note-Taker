@@ -2,20 +2,17 @@
 const path = require("path");
 const router = require("express").Router();
 
-// GET 
-// Home page
+// Index page
 router.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../public/", "index.html"));
 });
 
-// GET 
 // Notes page
 router.get("/notes", (req, res) => {
   res.sendFile(path.join(__dirname, "../public", "notes.html"));
 });
 
-// GET
-// all/any notes with wildcard
+// others => index
 router.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../public", "index.html"));
 });
