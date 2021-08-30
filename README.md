@@ -8,18 +8,18 @@ An app that can be used to write and save notes
 ## Description 
 
 This application uses an Express.js back end and saves and retrieves note data from a JSON file. You can write and save notes to organize the thoughts and keep track of tasks you need to complete.
-using this app.
+
 ## Table of Contents 
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
-- [Screenshot](#screenshot)
+- [Screenshots](#screenshots)
 - [Deployed](#deployed)
 - [Questoins](#questions)
 
   
 ## Installation 
-This app is already deployed on heroku https://young-tor-62851.herokuapp.com/, but if you want to install it locally don't forget
+This app is already deployed on heroku https://young-tor-62851.herokuapp.com, but if you want to install it locally, don't forget:
    ``` 
     npm init
     npm install express
@@ -34,9 +34,9 @@ This app is already deployed on heroku https://young-tor-62851.herokuapp.com/, b
   The MIT License
 
 
-## Screenshot
+## Screenshots
   
-  ![alt text](Screenshot.png)| 
+  ![alt text](Screenshot1.png) ![alt text](Screenshot2.png)| 
 
 ## Deployed 
 https://young-tor-62851.herokuapp.com/
