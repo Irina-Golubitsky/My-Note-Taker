@@ -19,7 +19,7 @@ using this app.
 
   
 ## Installation 
-This app is already deployed on heroku, but if you want to install it locally don't forget
+This app is already deployed on heroku https://young-tor-62851.herokuapp.com/, but if you want to install it locally don't forget
    ``` 
     npm init
     npm install express
@@ -39,7 +39,7 @@ This app is already deployed on heroku, but if you want to install it locally do
   ![alt text](Screenshot.png)| 
 
 ## Deployed 
-
+https://young-tor-62851.herokuapp.com/
    
 ## Questions
   If you hane any questions:
