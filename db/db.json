@@ -1,1 +1,9 @@
-[{"title":"first","text":"text1"},{"title":"second note","text":"text2 "},{"title":"first","text":"text1\n"}]
+{
+  "notes": [
+    {
+      "id": "0dfdf37e-80a4-4556-87f3-083eb9172c73",
+      "title": "new one",
+      "text": "hfierhf 1"
+    }
+  ]
+}

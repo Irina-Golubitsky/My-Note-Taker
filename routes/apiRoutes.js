@@ -1,44 +1,41 @@
 const router = require("express").Router();
-let notes = require("../db/db.json");
+let  {notes} = require("../db/db.json");
+const uuid = require("uuid");
 const path = require("path");
 const fs = require("fs");
-   //updates the json file whenever a note is added or deleted
-   function writeDb() {
-       console.log(path.join(__dirname, '../db/db.json'));
-    fs.writeFile(path.join(__dirname, '../db/db.json'),JSON.stringify(notes),err => {
-        if (err) throw err;
-        return true;
-    });
-}
 
-// GET Notes
-console.log(notes);
+const writeDB = () => {
+    fs.writeFileSync(
+        path.join(__dirname, '../db/db.json'),
+        JSON.stringify({notes}, null, 2)
+    );
+    return notes;
+};
+
+// Get notes
 router.get("/notes", (req, res) => {
+  console.log(notes);
   res.json(notes);
 });
 
-// Setup the /api/notes post route
-router.post("/notes", function(req, res) {
-    notes.push(req.body);
-    writeDb();
-    console.log("Added new note: "+req.body.title);
+// Add new note with id 
+router.post("/notes", (req, res) => {
+  const newNote = {
+    id: uuid.v4(),
+    title: req.body.title,
+    text: req.body.text
+  } // Checks if blank 
+
+  notes.push(newNote);
+  writeDB();
     res.json(notes);
+  
 });
 
-// Retrieves a note with specific id
-router.get("/notes/:id", function(req,res) {
-    // display json for the notes array indices of the provided id
-    console.log(req.params.id);
-    res.json(notes[req.params.id]);
+// Delete note by id
+router.delete("/notes/:id", (req, res) => {
+    notes = notes.filter(note => note.id !== req.params.id);
+   writeDB();
+   res.json(notes);
 });
-
-// Deletes a note with specific id
-router.delete("/notes/:id", function(req, res) {
-    notes.splice(req.params.id, 1);
-    writeDb();
-    console.log("Deleted note with id "+req.params.id);
-    res.json(notes);
-});
-
-
 module.exports = router;
